@@ -1,0 +1,95 @@
+/* Responsive Portfolio Styles */
+/* Reset & base */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+	margin: 0;
+	font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+	line-height: 1.6;
+	color: #111;
+	background: #fafafa;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+/* Layout container */
+.container {
+	width: 100%;
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+/* Header & Navigation */
+header { background: #fff; border-bottom: 1px solid #eaeaea; }
+nav {
+	display: grid; /* grid, not flex */
+	grid-template-columns: 1fr auto;
+	align-items: center;
+	gap: 1rem;
+}
+.logo { font-weight: 700; font-size: 1.25rem; padding: 0.75rem 0; }
+.nav-links { list-style: none; margin: 0; padding: 0; }
+.nav-links li { display: inline-block; margin-left: 1rem; }
+.nav-links li:first-child { margin-left: 0; }
+.nav-links a { padding: 0.5rem 0; border-bottom: 2px solid transparent; }
+.nav-links a:hover, .nav-links a:focus { border-bottom-color: #111; }
+
+/* Main */
+main.container { padding-top: 1.5rem; padding-bottom: 2rem; }
+
+/* Sections */
+section { background: #fff; border: 1px solid #eaeaea; border-radius: 12px; padding: 1.5rem; margin: 1rem 0; }
+section h2 { font-size: 1.5rem; margin: 0 0 0.75rem; }
+
+/* Hero */
+#hero { text-align: left; padding: 2rem 1.5rem; }
+#hero h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 0.5rem; }
+#hero p { font-size: 1rem; color: #444; margin: 0; }
+
+/* Projects */
+.project-list {
+	display: grid; /* grid, not flex */
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 1rem;
+}
+.project { border: 1px solid #eee; border-radius: 10px; padding: 1rem; background: #fff; }
+.project h3 { margin: 0 0 0.5rem; font-size: 1.1rem; }
+.project p { margin: 0; color: #444; }
+
+/* Forms */
+form { margin-top: 0.5rem; }
+input, textarea, button { width: 100%; font: inherit; }
+input, textarea {
+	padding: 0.8rem 0.9rem;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	color: #111;
+	background: #fff;
+}
+input:focus, textarea:focus { outline: 2px solid #111; outline-offset: 2px; }
+textarea { min-height: 140px; resize: vertical; }
+button[type="submit"] {
+	margin-top: 0.75rem;
+	padding: 0.9rem 1rem;
+	border: 0;
+	border-radius: 10px;
+	background: #111;
+	color: #fff;
+	cursor: pointer;
+}
+button[type="submit"]:hover { background: #333; }
+button[type="submit"]:focus { outline: 2px solid #111; outline-offset: 2px; }
+
+/* Footer */
+footer { text-align: center; color: #666; padding: 2rem 0; }
+
+/* Responsive tweaks */
+@media (min-width: 700px) {
+	#hero h1 { font-size: 2.6rem; }
+	section h2 { font-size: 1.7rem; }
+}
+@media (min-width: 1024px) {
+	#hero { padding: 3rem 2.5rem; }
+	#hero h1 { font-size: 3rem; }
+}
