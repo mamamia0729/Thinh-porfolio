@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="assets/style.css">
+            <script>
+                function toggleTheme() {
+                    const body = document.body;
+                    body.classList.toggle('dark-mode');
+                    localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+                }
+                window.onload = function() {
+                    if(localStorage.getItem('theme') === 'dark') {
+                        document.body.classList.add('dark-mode');
+                    }
+                }
+            </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">My Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode">🌙</button>
+        </nav>
+    </header>
+    <section id="hero">
+        <h1>Hello, I'm Your Name</h1>
+        <p>Web Developer & Designer</p>
+    </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Passionate developer with experience in building modern web applications.</p>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-list">
+            <div class="project">
+                <h3>Project One</h3>
+                <p>Description of project one.</p>
+            </div>
+            <div class="project">
+                <h3>Project Two</h3>
+                <p>Description of project two.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
